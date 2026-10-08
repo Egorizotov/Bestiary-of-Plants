@@ -1,0 +1,10 @@
+# системные
+.DS_Store
+Thumbs.db
+
+# редакторы
+.vscode/
+.idea/
+
+# временные
+*.log

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход — Flora</title>
+<link rel="stylesheet" href="css/style.css">
+<script>
+  (function () {
+    var t = localStorage.getItem('flora-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+
+<button class="theme-toggle" id="themeToggle" title="Сменить тему">🌙</button>
+
+<div class="auth-page">
+  <div class="auth-card">
+
+    <h1 class="auth-title">Вход</h1>
+
+    <form id="loginForm" novalidate>
+
+      <div class="field" data-field="login">
+        <div class="field-input-wrap">
+          <input type="text" id="login" placeholder="Логин" autocomplete="username">
+          <span class="error-icon">!</span>
+        </div>
+        <div class="error-text"></div>
+      </div>
+
+      <div class="field" data-field="password">
+        <div class="field-input-wrap">
+          <input type="password" id="password" placeholder="Пароль" autocomplete="current-password">
+          <span class="error-icon">!</span>
+        </div>
+        <div class="error-text"></div>
+      </div>
+
+      <div class="forgot-row">
+        <a href="#" class="forgot-link" id="forgotLink">забыли пароль?</a>
+      </div>
+
+      <button type="submit" class="btn">ВХОД</button>
+      <a href="register.html" class="btn btn-link">РЕГИСТРАЦИЯ</a>
+
+    </form>
+
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Регистрация — Flora</title>
+<link rel="stylesheet" href="css/style.css">
+<script>
+  (function () {
+    var t = localStorage.getItem('flora-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+
+<!-- кнопка темы на страницах авторизации осталась плавающей -->
+<button class="theme-toggle" id="themeToggle" title="Сменить тему">🌙</button>
+
+<div class="auth-page">
+  <div class="auth-card">
+
+    <h1 class="auth-title">Регистрация</h1>
+
+    <form id="registerForm" novalidate>
+
+      <!-- ИМЯ -->
+      <div class="field" data-field="name">
+        <div class="field-input-wrap">
+          <input type="text" id="name" placeholder="Имя" autocomplete="name">
+          <span class="error-icon">!</span>
+        </div>
+        <div class="error-text"></div>
+      </div>
+
+      <!-- ЛОГИН -->
+      <div class="field" data-field="login">
+        <div class="field-input-wrap">
+          <input type="text" id="login" placeholder="Логин" autocomplete="username">
+          <span class="error-icon">!</span>
+        </div>
+        <div class="error-text"></div>
+      </div>
+
+      <!-- ПАРОЛЬ -->
+      <div class="field" data-field="password">
+        <div class="field-input-wrap">
+          <input type="password" id="password" placeholder="Пароль" autocomplete="new-password">
+          <span class="error-icon">!</span>
+        </div>
+        <div class="error-text"></div>
+      </div>
+
+      <button type="submit" class="btn">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+      <a href="index.html" class="btn btn-link">ВОЙТИ КАК ГОСТЬ</a>
+
+    </form>
+
+    <p class="auth-switch">
+      Уже есть аккаунт? <a href="login.html">Войти</a>
+    </p>
+
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

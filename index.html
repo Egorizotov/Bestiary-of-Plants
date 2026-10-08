@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flora — чат о растениях</title>
+<link rel="stylesheet" href="css/style.css">
+<script>
+  (function () {
+    var t = localStorage.getItem('flora-theme') || 'light';
+    document.documentElement.setAttribute('data-theme', t);
+  })();
+</script>
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ================= ЛЕВАЯ КОЛОНКА ================= -->
+  <aside class="sidebar">
+
+    <!-- Логотип + кнопка темы в одной строке -->
+    <div class="logo">
+      <span class="logo-icon">🌿</span>
+      <span class="logo-text">Flora</span>
+      <button class="theme-toggle" id="themeToggle" title="Сменить тему">🌙</button>
+    </div>
+
+    <button class="btn-new-chat" id="newChatBtn">
+      <span class="plus">+</span> СОЗДАТЬ НОВЫЙ ЧАТ
+    </button>
+
+    <ul class="chat-list" id="chatList"></ul>
+
+    <div class="sidebar-foot">
+      <a href="login.html" class="user-link">
+        <span class="avatar">Г</span>
+        <span>Войти / Регистрация</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ================= ПРАВАЯ КОЛОНКА ================= -->
+  <main class="chat-main">
+    <div class="messages" id="messages"></div>
+
+    <form class="composer" id="composerForm" autocomplete="off">
+      <div class="composer-inner">
+        <input
+          type="text"
+          id="composerInput"
+          placeholder="Напишите, о каком растении хотите узнать..."
+        >
+        <button type="submit" class="send-btn" aria-label="Отправить">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5"
+               stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+          </svg>
+        </button>
+      </div>
+    </form>
+  </main>
+
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
