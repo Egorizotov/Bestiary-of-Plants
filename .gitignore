@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Node.js
+node_modules/
+dist/
+build/
+
+# Editors / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local data, indexes and generated artifacts
+.data-local/
+indexes/
+*.sqlite
+*.db
+
+# Keep small, anonymized test fixtures if they are intentionally tracked.
